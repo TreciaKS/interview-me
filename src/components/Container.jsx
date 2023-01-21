@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from '../Images/business-woman.png' 
+import Logo from './Logo'
 
 const Container = ({children}) => {
   return (
@@ -7,13 +8,15 @@ const Container = ({children}) => {
         <main className="bg-white">
             <div className="flex justify-center min-h-screen">
                 <header className="w-full px-12 py-8 bg-white">
-                    {children}
+                <Logo />
+                  {children}
                 </header>
 
             {/* place images */}
-            <div class="bg-cover lg:block lg:w-1/2">
+            <div className="bg-cover lg:block lg:w-1/2">
+              <img src={Image} className="h-screen w-full" alt="BUSINESS WOMAN HOLDING A PHONE" />
             </div>
-              <img src={Image} alt="BUSINESS WOMAN HOLDING A PHONE" />
+              
             </div>
         </main>
     </>
