@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../Images/Logo.png' 
+import Image from '../Images/business-woman.png' 
 
 const Container = ({children}) => {
   return (
