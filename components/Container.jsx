@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormLayout = ({children}) => {
+const Container = ({children}) => {
   return (
     <>
         <main className="bg-white">
@@ -19,4 +19,4 @@ const FormLayout = ({children}) => {
   )
 }
 
-export default FormLayout
+export default Container
