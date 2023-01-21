@@ -1,15 +1,19 @@
 import React from 'react'
 import Image from '../Images/business-woman.png' 
+import Form from './Form'
+import FormLayout from './FormLayout'
 import Logo from './Logo'
 
-const Container = ({children}) => {
+const Container = () => {
   return (
     <>
         <main className="bg-white">
             <div className="flex justify-center min-h-screen">
                 <header className="w-full px-12 py-8 bg-white">
                 <Logo />
-                  {children}
+                  <FormLayout>
+                    <Form />
+                  </FormLayout>
                 </header>
 
             {/* place images */}
