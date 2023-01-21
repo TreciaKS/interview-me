@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from '/business-woman.png'
 
 const Container = ({children}) => {
   return (
@@ -12,7 +13,7 @@ const Container = ({children}) => {
             {/* place images */}
             <div class="bg-cover lg:block lg:w-1/2">
             </div>
-
+              <img src={Image} alt="BUSINESS WOMAN HOLDING A PHONE" />
             </div>
         </main>
     </>
