@@ -18,7 +18,7 @@ const Container = () => {
   function handleClick(e) {
     e.preventDefault();
     navigate("/EmailSubmission");
-    console.log(inputs.firstname)
+    console.log(inputs)
   }
   
   return (
@@ -38,7 +38,7 @@ const Container = () => {
                 value={inputs.firstname || ""}
                 name="firstname"
                 placeholder="Insert First Name"
-                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 capitalize border border-gray-200 rounded-lg outline-none"
                 onChange={handleChange}
                 required
               />
@@ -58,7 +58,7 @@ const Container = () => {
                 value={inputs.lastname || ""}
                 name="lastname"
                 placeholder="Insert Last Name"
-                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 capitalize border border-gray-200 rounded-lg outline-none"
                 onChange={handleChange}
                 required
               />
@@ -78,7 +78,7 @@ const Container = () => {
                 value={inputs.business_name || ""}
                 name="business_name"
                 placeholder="Insert Business Name"
-                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 capitalize border border-gray-200 rounded-lg outline-none"
                 onChange={handleChange}
                 required
               />
@@ -98,7 +98,7 @@ const Container = () => {
                 value={inputs.email || ""}
                 name="email"
                 placeholder="myemail@xyz.com"
-                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 capitalize border border-gray-200 rounded-lg outline-none"
                 onChange={handleChange}
                 required
               />
@@ -114,15 +114,17 @@ const Container = () => {
                 Contact Number
               </label>
               <div className="flex">
-                <select className="relative mr-2 outline-none" name="za-code">
+                <select className="relative mr-2 capitalize outline-none" name="za-code">
                   <option value="+27">+27</option>
                 </select>
                 <input
                   type="tel"
                   value={inputs.country_code || ""}
+                  maxlength="10"
+                  minlength="9"
                   name="country_code"
-                  placeholder="myemail@xyz.com"
-                  className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                  placeholder="xxx-xxx-xxxx"
+                  className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 capitalize border border-gray-200 rounded-lg outline-none"
                   onChange={handleChange}
                   required
                 />
@@ -186,7 +188,7 @@ const Container = () => {
                 id="submit"
                 name="submit"
                 value="Sign Up"
-                className="w-full px-3 py-1 text-base leading-8 bg-blue-600 rounded-lg outline-none text-gray-50"
+                className="w-full px-3 py-1 text-base leading-8 capitalize bg-blue-600 rounded-lg outline-none text-gray-50"
               />
             </div>
           </div>
