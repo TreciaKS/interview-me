@@ -2,6 +2,7 @@ import React from 'react'
 import Image from '../Images/business-woman.png' 
 import FormLayout from './FormLayout'
 import Logo from './Logo'
+import Email from './EmailSubmission.jsx'
 
 const Container = () => {
   return (
@@ -10,7 +11,8 @@ const Container = () => {
             <div className="flex justify-center min-h-screen">
                 <header className="w-full px-12 py-8 bg-white">
                 <Logo />
-                <FormLayout />
+                {/* <FormLayout /> */}
+                <Email />
                 </header>
 
             {/* place images */}
