@@ -1,5 +1,16 @@
-# Getting Started with Create React App
+# Project Title
+Interview me - This is a mini assignment for an interview that I must conduct.
 
+## Screenshots
+The form is situated at http://localhost:3000 and contains this layout. When the form has been completed, it will take you to the email submission page at: http://localhost:3000/EmailSubmission
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+### Animal form
+This form asks the user to input their favourite animal, then their query will be paired with a random adjective and thereafter, will the user receive the requested image with a random adjective.
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
