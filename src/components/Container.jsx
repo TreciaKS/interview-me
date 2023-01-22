@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppLayout from './AppLayout'
 import FormLayout from './FormLayout'
 import { useNavigate } from 'react-router-dom'
 
 const Container = () => {
-  const navigate = useNavigate()
+  const [inputs, setInputs] = useState({});
   
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs((values) => ({ ...values, [name]: value }));
+  }
+  
+  // redirect user after submission
+  const navigate = useNavigate();
+
   function handleClick(e) {
     e.preventDefault();
-    navigate('/EmailSubmission')
+    navigate("/EmailSubmission");
+    console.log(inputs.firstname)
   }
   
   return (
@@ -25,10 +35,12 @@ const Container = () => {
               </label>
               <input
                 type="text"
-                id="firstname"
+                value={inputs.firstname || ""}
                 name="firstname"
                 placeholder="Insert First Name"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
@@ -43,10 +55,12 @@ const Container = () => {
               </label>
               <input
                 type="text"
-                id="lastname"
+                value={inputs.lastname || ""}
                 name="lastname"
                 placeholder="Insert Last Name"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
@@ -61,10 +75,12 @@ const Container = () => {
               </label>
               <input
                 type="text"
-                id="business-name"
-                name="business-name"
+                value={inputs.business_name || ""}
+                name="business_name"
                 placeholder="Insert Business Name"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
@@ -79,10 +95,12 @@ const Container = () => {
               </label>
               <input
                 type="email"
-                id="email"
+                value={inputs.email || ""}
                 name="email"
                 placeholder="myemail@xyz.com"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
@@ -96,19 +114,17 @@ const Container = () => {
                 Contact Number
               </label>
               <div className="flex">
-                <select
-                  className="relative mr-2 outline-none"
-                  name="za-code"
-                  id="country_code"
-                >
+                <select className="relative mr-2 outline-none" name="za-code">
                   <option value="+27">+27</option>
                 </select>
                 <input
                   type="tel"
-                  id="number"
-                  name="number"
+                  value={inputs.country_code || ""}
+                  name="country_code"
                   placeholder="myemail@xyz.com"
                   className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                  onChange={handleChange}
+                  required
                 />
               </div>
             </div>
@@ -124,10 +140,12 @@ const Container = () => {
               </label>
               <input
                 type="password"
-                id="password"
+                value={inputs.password || ""}
                 name="password"
                 placeholder="*********"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
+                required
               />
             </div>
           </div>
@@ -142,10 +160,11 @@ const Container = () => {
               </label>
               <input
                 type="password"
-                id="password"
-                name="password"
+                value={inputs.confirm_password || ""}
+                name="confirm_password"
                 placeholder="*********"
                 className="w-full px-3 py-1 text-base leading-8 text-gray-500 placeholder-gray-300 border border-gray-200 rounded-lg outline-none"
+                onChange={handleChange}
                 required
               />
             </div>
