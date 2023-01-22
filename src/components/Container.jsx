@@ -7,6 +7,7 @@ const Container = () => {
   const navigate = useNavigate()
   
   function handleClick(e) {
+    e.preventDefault();
     navigate('/EmailSubmission')
   }
   
