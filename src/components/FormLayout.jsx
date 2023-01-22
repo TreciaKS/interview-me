@@ -1,7 +1,6 @@
 import React from 'react'
-import Form from './Form'
 
-const FormLayout = () => {
+const FormLayout = ({children}) => {
   return (
     <section className="relative body-font lg:mt-24 md:mt-12">
         <div className="container px-5 py-12 mx-auto">
@@ -15,7 +14,7 @@ const FormLayout = () => {
                         Fill in the fields below to get started
                     </p>
                 </div>
-                <Form />
+                {children}
             </div>
         </div>
     </section>
