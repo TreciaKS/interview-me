@@ -1,17 +1,33 @@
 import React from 'react'
+import { Player } from "@lottiefiles/react-lottie-player";
+import EmailAnimation from '../email-animation/Email_Animation.json'
+
 
 const EmailSubmission = () => {
   return (
-    <section classMame="h-s mx-auto grid max-w-lg place-content-center px-4 py-12">
-        <div classMame="mx-auto h-10 w-10 bg-red-100 sm:w-1/4"></div>
-        <h2 classMame="mt-2 text-center text-3xl font-semibold text-gray-800">Check your email</h2>
+    <section className="grid items-center justify-center h-full">
+      <Player
+        src={EmailAnimation}
+        loop
+        autoplay
+        style={{
+          height: "250px",
+          width: "250px",
+          marginTop: "80px",
+        }}
+      />
+      <div className="-mt-60">
+        <h2 className="-mt-32 text-3xl font-semibold text-center text-gray-800">
+          Check your email
+        </h2>
 
-        <p classMame="text-md mt-1 text-center text-gray-500">
-            We&apos;ve sent a verification like to <span classMame="font-medium text-gray-700">user@email.com</span>
+        <p className="text-center text-gray-500 text-md">
+          We&apos;ve sent a verification like to &nbsp;
+          <span className="font-medium text-gray-700">user@email.com</span>
         </p>
+      </div>
     </section>
-
-  )
-}
+  );
+};
 
 export default EmailSubmission
