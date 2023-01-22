@@ -1,10 +1,11 @@
 import React from 'react'
+import Form from './Form'
 
-const FormLayout = ({children}) => {
+const FormLayout = () => {
   return (
-    <section className="body-font relative lg:mt-24 md:mt-12">
-        <div className="container mx-auto px-5 py-12">
-            <div className="mx-auto w-10/12">
+    <section className="relative body-font lg:mt-24 md:mt-12">
+        <div className="container px-5 py-12 mx-auto">
+            <div className="w-10/12 mx-auto">
                 <div class="mb-6">
                     <h1 class="text-3xl font-semibold text-gray-800 capitalize">
                         Business Sign Up
@@ -14,7 +15,7 @@ const FormLayout = ({children}) => {
                         Fill in the fields below to get started
                     </p>
                 </div>
-                {children}
+                <Form />
             </div>
         </div>
     </section>

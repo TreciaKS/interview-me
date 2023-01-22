@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from '../Images/business-woman.png' 
-import Form from './Form'
 import FormLayout from './FormLayout'
 import Logo from './Logo'
 
@@ -11,14 +10,12 @@ const Container = () => {
             <div className="flex justify-center min-h-screen">
                 <header className="w-full px-12 py-8 bg-white">
                 <Logo />
-                  <FormLayout>
-                    <Form />
-                  </FormLayout>
+                <FormLayout />
                 </header>
 
             {/* place images */}
             <div className="bg-cover lg:block lg:w-1/2">
-              <img src={Image} className="h-screen w-full" alt="BUSINESS WOMAN HOLDING A PHONE" />
+              <img src={Image} className="w-full h-screen" alt="BUSINESS WOMAN HOLDING A PHONE" />
             </div>
               
             </div>
