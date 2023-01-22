@@ -23,7 +23,7 @@ const EmailSubmission = () => {
           </h2>
 
           <p className="text-center text-gray-500 text-md">
-            We&apos;ve sent a verification like to &nbsp;
+            We&apos;ve sent a verification link to&nbsp;
             <span className="font-medium text-gray-700">user@email.com</span>
           </p>
         </div>
