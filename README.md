@@ -8,7 +8,7 @@ The form is situated at http://localhost:3000 and contains this layout. When the
 
 
 ### Animal form
-This form asks the user to input their favourite animal, then their query will be paired with a random adjective and thereafter, will the user receive the requested image with a random adjective.
+This form asks the user to input their favourite animal, then their query will be paired with a random adjective and thereafter, will the user receive the requested image with a random adjective. Located: http://localhost:3000/Animalform
 <img width="1512" alt="Screenshot 2023-01-22 at 19 13 49" src="https://user-images.githubusercontent.com/82657928/213930464-f018d085-4ea4-4b92-ae97-08d76512cb3e.png">
 
 #### Issues
