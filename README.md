@@ -2,12 +2,14 @@
 Interview me - This is a mini assignment for an interview that I must conduct.
 
 ## Screenshots
+### Form
 The form is situated at http://localhost:3000 and contains this layout. When the form has been completed, it will take you to the email submission page at: http://localhost:3000/EmailSubmission
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img width="1512" alt="Screenshot 2023-01-22 at 15 33 29" src="https://user-images.githubusercontent.com/82657928/213930469-af571fad-d542-41b9-baaa-694a664f56c9.png">
+
 
 ### Animal form
 This form asks the user to input their favourite animal, then their query will be paired with a random adjective and thereafter, will the user receive the requested image with a random adjective.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img width="1512" alt="Screenshot 2023-01-22 at 19 13 49" src="https://user-images.githubusercontent.com/82657928/213930464-f018d085-4ea4-4b92-ae97-08d76512cb3e.png">
 
 
 # Getting Started with Create React App
