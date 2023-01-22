@@ -22,33 +22,34 @@ const AnimalForm = () => {
   const [Images, setImages] = useState([])
 
   function handleSubmit(e) {
-    e.preventDefault()
     getImagesData()
     console.log("ck")
   }
 
   async function getImagesData() {
-    const URL = `https://serpapi.com/search.json?q=${query}&tbm=isch&ijn=1`
+    const URL = `https://serpapi.com/search.json?q=${query}&tbm=isch&ijn=1`;
 
     const fetching = await fetch(URL)
     const toJson = await fetching.json()
     setImages(toJson.results);
   }
   
-  randomAdjective += randomAdjective 
-  
+  // setQuery((randomAdjective = randomAdjective + e.target.value));
   function handleChange(e) {
     e.preventDefault();
-    setQuery(randomAdjective + e.target.value);
-
+    setQuery((e.target.value));
+    console.log("rendered");
   }
-  console.log(URL)
 
   return (
     <>
       <h1 className="mt-20 text-2xl font-bold text-center ">
-        Enter Your favourite Animal {query}
+        Enter your Favourite Animal
       </h1>
+      <p className="mt-2 text-xl font-bold text-center text-gray-600">
+        {" "}
+        {randomAdjective + " " + query}
+      </p>
 
       <form
         onSubmit={handleSubmit}
@@ -77,8 +78,8 @@ const AnimalForm = () => {
             value={query}
             onChange={handleChange}
             placeholder="Enter Image name"
-            maxLength='20'
-            minLength='2'
+            maxLength="20"
+            minLength="2"
             required
             className="outline-none"
           />
