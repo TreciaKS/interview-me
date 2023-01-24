@@ -14,33 +14,33 @@ let randomAdjectives = [
   "big",
   "small"
 ]
-let randomAdjective = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)];
-console.log("Testing: " + randomAdjective);
+let randomAdjective = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)]
+console.log("Testing: " + randomAdjective)
 
 const AnimalForm = () => {
-  const [query, setQuery] = useState("");
-  const [Images, setImages] = useState([]);
+  const [query, setQuery] = useState("")
+  const [Images, setImages] = useState([])
 
   function handleSubmit(e) {
-    getImagesData();
-    e.preventDefault();
+    getImagesData()
+    e.preventDefault()
   }
 
   // https://serpapi.com/search.json?q=randomAdjectives+${query}&tbm=isch&ijn=1
   async function getImagesData() {
-    const URL = `https://serpapi.com/search.json?q=${query}&tbm=isch&ijn=1`
+    const URL = `https://serpapi.com/search.json?q=${randomAdjective}+${query}&tbm=isch&ijn=1`
 
-    const fetching = await fetch(URL);
-    const toJson = await fetching.json();
-    setImages(toJson.results);
-    console.log(URL);
+    const fetching = await fetch(URL)
+    const toJson = await fetching.json()
+    setImages(toJson.results)
+    console.log(URL)
   }
 
-  // setQuery((randomAdjective = randomAdjective + e.target.value));
+  // setQuery((randomAdjective = randomAdjective + e.target.value))
   function handleChange(e) {
-    e.preventDefault();
-    setQuery(e.target.value);
-    console.log("rendered");
+    e.preventDefault()
+    setQuery(e.target.value)
+    console.log("rendered")
   }
 
   return (
@@ -100,7 +100,7 @@ const AnimalForm = () => {
         </div>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default AnimalForm;
+export default AnimalForm
