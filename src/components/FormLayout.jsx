@@ -2,7 +2,7 @@ import React from 'react'
 
 const FormLayout = ({children}) => {
   return (
-    <section className="relative body-font lg:mt-24 md:mt-12">
+    <section className="relative body-font md:mt-12">
         <div className="container px-5 py-12 mx-auto">
             <div className="w-10/12 mx-auto">
                 <div class="mb-6">
