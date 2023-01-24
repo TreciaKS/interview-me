@@ -28,7 +28,7 @@ const AnimalForm = () => {
 
   // https://serpapi.com/search.json?q=randomAdjectives+${query}&tbm=isch&ijn=1
   async function getImagesData() {
-    const URL = `https://serpapi.com/search.json?q=${randomAdjective}+${query}&tbm=isch&ijn=1`
+    const URL = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?q=${randomAdjective}+${query}&tbm=isch&ijn=1`;
 
     const fetching = await fetch(URL)
     const toJson = await fetching.json()
@@ -45,7 +45,7 @@ const AnimalForm = () => {
 
   return (
     <>
-      <h1 className="mt-20 text-2xl font-bold text-center ">
+      <h1 className="mt-20 text-2xl font-bold text-center">
         Enter your Favourite Animal
       </h1>
       <p className="mt-2 text-xl font-bold text-center text-gray-600">
