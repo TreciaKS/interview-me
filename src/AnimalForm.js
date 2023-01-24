@@ -23,16 +23,17 @@ const AnimalForm = () => {
 
   function handleSubmit(e) {
     getImagesData();
-    console.log("ck");
+    e.preventDefault();
   }
 
   // https://serpapi.com/search.json?q=randomAdjectives+${query}&tbm=isch&ijn=1
   async function getImagesData() {
-    const URL = `https://serpapi.com/search.json?q=${randomAdjectives}+${query}&tbm=isch&ijn=1`
+    const URL = `https://serpapi.com/search.json?q=${query}&tbm=isch&ijn=1`
 
     const fetching = await fetch(URL);
     const toJson = await fetching.json();
     setImages(toJson.results);
+    console.log(URL);
   }
 
   // setQuery((randomAdjective = randomAdjective + e.target.value));
